@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: pod
+metadata:
+  name: config-pod
+spec:
+  containers:
+  - name: config-pod
+    image: nginx
+    env:
+    - name: GAME
+      valueFrom: 
+        configMapKeyRef: 
+          name: game-demo
+          key: GAME
+
+    - name: DURATION
+      valueFrom: 
+        configMapKeyRef: 
+          name: game-demo
+          key: DURATION
+
+    - name: PLAYER
+      valueFrom: 
+        configMapKeyRef: 
+          name: game-demo
+          key: PLAYER
+
+    - name: SOURCE
+      valueFrom: 
+        configMapKeyRef: 
+          name: game-demo
+          key: SOURCE
