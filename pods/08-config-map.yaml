@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: game-demo
+data:
+  GAME: PubG
+  DURATION: 1000HRS
+  PLAYER: NISHAL
+  SOURCE: MOBILE
